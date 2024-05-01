@@ -1,0 +1,61 @@
+Filtro de Moedas: Decida quais moedas você deseja suportar em seu conversor. Por exemplo, você pode escolher USD, EUR, GBP, JPY, BRL etc. Extraia as taxas de câmbio relevantes do JSON para essas moedas.
+
+Aqui estão algumas moedas comuns que você pode considerar incluir:
+
+1. **USD (Dólar Americano):**
+   - O dólar americano é amplamente utilizado em todo o mundo e serve como moeda base para muitas transações internacionais.
+
+2. **EUR (Euro):**
+   - O euro é a moeda oficial de 19 dos 27 países da União Europeia. É uma das moedas mais negociadas no mercado de câmbio.
+
+3. **GBP (Libra Esterlina):**
+   - A libra esterlina é a moeda do Reino Unido. Ela também é conhecida como "libra britânica".
+
+4. **JPY (Iene Japonês):**
+   - O iene japonês é a moeda do Japão. É amplamente utilizado na Ásia e é uma das moedas mais antigas do mundo.
+
+5. **BRL (Real Brasileiro):**
+   - O real brasileiro é a moeda oficial do Brasil. É importante incluí-lo se você está desenvolvendo o Conversor de Moedas no Brasil.
+
+6. **AUD (Dólar Australiano):**
+   - O dólar australiano é a moeda da Austrália e também é usado em alguns países do Pacífico.
+
+Extrair as taxas de câmbio relevantes do JSON da API para essas moedas. Você pode fazer isso mapeando as chaves do objeto "rates" para os códigos das moedas desejadas.
+
+Mapear Chaves Rates:
+
+```java
+import org.json.JSONObject;
+
+public class ConversorMoedasApp {
+
+    public static void main(String[] args) {
+        // Suponha que você já tenha feito a requisição à API e obtido a resposta em formato JSON
+        String respostaJson = "{ \"base\": \"USD\", \"rates\": { \"AED\": 3.67297, \"EUR\": 0.87, \"GBP\": 0.73, \"JPY\": 109.23, \"BRL\": 5.25 } }";
+
+        // Parse do JSON
+        JSONObject json = new JSONObject(respostaJson);
+
+        // Moedas desejadas
+        String[] moedas = { "EUR", "GBP", "JPY", "BRL" };
+
+        // Extraindo as taxas de câmbio
+        for (String moeda : moedas) {
+            if (json.has("rates") && json.getJSONObject("rates").has(moeda)) {
+                double taxa = json.getJSONObject("rates").getDouble(moeda);
+                System.out.println("1 USD = " + taxa + " " + moeda);
+            } else {
+                System.out.println("Taxa de câmbio não encontrada para " + moeda);
+            }
+        }
+    }
+}
+```
+
+Neste exemplo:
+- A resposta JSON é simulada na variável `respostaJson`.
+- O objeto JSON é analisado usando a biblioteca `org.json`.
+- As moedas desejadas (EUR, GBP, JPY, BRL) são extraídas do objeto "rates".
+- As taxas de câmbio são exibidas no formato "1 USD = taxa moeda".
+
+Adaptar esse código ao seu projeto e à sua implementação específica. 
