@@ -1,0 +1,12 @@
+Consumo da API: Pesquise e escolha uma API de taxas de câmbio. Existem várias opções disponíveis, como a Open Exchange Rates, a ExchangeRatesAPI ou a CurrencyLayer. Registre-se na API escolhida e obtenha uma chave de acesso (API key).
+
+1. **Open Exchange Rates API:**
+   A **Open Exchange Rates** oferece dados históricos e em tempo real de taxas de câmbio para mais de 200 moedas. Ela fornece respostas formatadas em JSON que podem ser facilmente analisadas e usadas em seu aplicativo. Além disso, a API é gratuita para uso básico, mas requer uma chave de acesso (API key). Você pode se registrar no site deles para obter sua chave.
+
+2. **ExchangeRatesAPI:**
+   A **ExchangeRatesAPI** também é uma opção popular. Ela oferece taxas de câmbio atualizadas em tempo real e suporta várias moedas. A API é gratuita para uso limitado, mas você pode adquirir uma assinatura paga para acesso completo. Registre-se no site deles para obter sua chave de acesso.
+
+3. **CurrencyLayer:**
+   A **CurrencyLayer** é outra API confiável. Ela fornece dados de taxas de câmbio em tempo real e históricos. A versão gratuita tem algumas limitações, mas você pode obter uma chave de acesso gratuita para começar. Visite o site da CurrencyLayer para se registrar.
+
+Ler os termos de uso e as políticas de privacidade de cada API antes de escolher a melhor opção para o seu projeto. Uma vez que você tenha sua chave de acesso, você poderá fazer requisições à API e obter as taxas de câmbio necessárias para o seu Conversor de Moedas. Se precisar de mais informações ou tiver alguma dúvida específica sobre alguma dessas APIs, estou à disposição! 😊🚀
