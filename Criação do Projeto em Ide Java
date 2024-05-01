@@ -1,0 +1,25 @@
+Criação do Projeto: Crie um novo projeto Java em sua IDE preferida (como Eclipse, IntelliJ ou NetBeans). Defina a estrutura básica do projeto, incluindo um pacote para suas classes.
+
+1. **Abra sua IDE:**
+   Abra a sua IDE preferida (como Eclipse, IntelliJ IDEA ou NetBeans).
+
+2. **Crie um Novo Projeto:**
+   No Eclipse, vá em "File" > "New" > "Java Project". Dê um nome ao projeto (por exemplo, "ConversorDeMoedas") e clique em "Finish". Isso criará a estrutura básica do projeto.
+
+3. **Defina um Pacote:**
+   Dentro do projeto, crie um pacote para organizar suas classes. Clique com o botão direito na pasta "src" e escolha "New" > "Package". Dê um nome ao pacote (por exemplo, "com.seuapp.conversor") e clique em "Finish".
+
+4. **Crie uma Classe Principal:**
+   Dentro do pacote, crie uma classe principal que será responsável por iniciar sua aplicação. Clique com o botão direito no pacote e escolha "New" > "Class". Dê um nome à classe (por exemplo, "ConversorMoedasApp") e marque a opção "public static void main(String[] args)". Clique em "Finish".
+
+5. **Estrutura Inicial do Projeto:**
+   Sua estrutura de projeto deve se parecer com isso:
+   ```
+   ConversorDeMoedas
+   ├── src
+   │   └── com
+   │       └── seuapp
+   │           └── conversor
+   │               └── ConversorMoedasApp.java
+   └── JRE System Library
+   ```
