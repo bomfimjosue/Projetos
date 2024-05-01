@@ -1,0 +1,26 @@
+Configuração do Ambiente Java: Certifique-se de ter o ambiente Java configurado corretamente. Você precisará do JDK (Java Development Kit) instalado em sua máquina. Se ainda não o tiver, faça o download e instale-o.
+
+1. **Instalação do JDK (Java Development Kit):**
+   Certifique-se de ter o JDK instalado em sua máquina. O JDK é necessário para compilar e executar programas Java. Você pode baixá-lo diretamente do site oficial da Oracle ou usar uma distribuição OpenJDK.
+
+2. **Verificação da Instalação:**
+   Após a instalação, verifique se o JDK está configurado corretamente. Abra um terminal ou prompt de comando e digite o seguinte comando:
+
+   ```
+   java -version
+   ```
+
+   Isso deve exibir a versão do JDK instalada. Se não funcionar, verifique se o caminho para o JDK está definido corretamente nas variáveis de ambiente do sistema.
+
+3. **Configuração do CLASSPATH:**
+   O CLASSPATH é uma variável de ambiente que especifica onde o Java deve procurar por classes e bibliotecas. Certifique-se de configurar o CLASSPATH corretamente para incluir o diretório onde o JDK está instalado.
+
+4. **IDE (Ambiente de Desenvolvimento Integrado):**
+   Escolha uma IDE para desenvolver seu projeto Java. Algumas opções populares são Eclipse, IntelliJ IDEA e NetBeans. Instale a IDE de sua preferência e crie um novo projeto Java.
+
+5. **Criando um Projeto Java:**
+   No Eclipse, por exemplo, vá em "File" > "New" > "Java Project". Dê um nome ao projeto e clique em "Finish". Isso criará a estrutura básica do projeto.
+
+6. **Criando uma Classe Principal:**
+   Dentro do projeto, crie uma classe principal (por exemplo, `ConversorMoedasApp`). Essa classe será responsável por iniciar sua aplicação.
+

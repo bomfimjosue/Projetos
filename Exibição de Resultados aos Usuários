@@ -1,0 +1,114 @@
+Exibição de Resultados aos Usuários: Crie um menu de opções para os usuários escolherem as moedas de origem e destino. Solicite o valor a ser convertido e calcule a conversão com base nas taxas obtidas d parte final do seu Conversor de Moedas, onde os usuários poderão escolher as moedas de origem e destino, inserir o valor a ser convertido e ver o resultado da conversão.
+
+Aqui está um exemplo de como você pode implementar essa funcionalidade em Java:
+
+```java
+import java.util.Scanner;
+
+public class ConversorMoedasApp {
+
+    public static void main(String[] args) {
+        // Suponha que você já tenha obtido as taxas de câmbio da API e armazenado em um objeto (por exemplo, jsonRates)
+
+        // Moedas suportadas
+        String[] moedas = { "USD", "EUR", "GBP", "JPY", "BRL" };
+
+        // Solicita a moeda de origem
+        System.out.println("Escolha a moeda de origem:");
+        for (int i = 0; i < moedas.length; i++) {
+            System.out.println((i + 1) + ". " + moedas[i]);
+        }
+        int origemIndex = lerInteiroEntre(1, moedas.length);
+
+        // Solicita a moeda de destino
+        System.out.println("Escolha a moeda de destino:");
+        int destinoIndex = lerInteiroEntre(1, moedas.length);
+
+        // Solicita o valor a ser convertido
+        System.out.print("Digite o valor em " + moedas[origemIndex - 1] + ": ");
+        double valorOrigem = lerDouble();
+
+        // Calcula a conversão
+        double taxaOrigem = jsonRates.getDouble(moedas[origemIndex - 1]);
+        double taxaDestino = jsonRates.getDouble(moedas[destinoIndex - 1]);
+        double valorDestino = (valorOrigem / taxaOrigem) * taxaDestino;
+
+        // Exibe o resultado
+        System.out.println(valorOrigem + " " + moedas[origemIndex - 1] + " equivalem a " + valorDestino + " " + moedas[destinoIndex - 1]);
+    }
+
+    // Função para ler um inteiro entre min e max
+    public static int lerInteiroEntre(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        int valor;
+        do {
+            System.out.print("Escolha (entre " + min + " e " + max + "): ");
+            valor = scanner.nextInt();
+        } while (valor < min || valor > max);
+        return valor;
+    }
+
+    // Função para ler um double
+    public static double lerDouble() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextDouble();
+    }
+}
+```
+
+Neste exemplo:
+- O usuário escolhe a moeda de origem e destino.
+- Insere o valor a ser convertido.
+- O cálculo é feito com base nas taxas de câmbio obtidas da API.
+- O resultado é exibido.
+
+Adapte esse código ao seu projeto e à sua implementação específica. 
+
+Tratar erros, como entradas inválidas dos usuários.
+
+Dicas para lidar com entradas inválidas:
+
+1. **Validação de Entrada:**
+   - Antes de realizar qualquer cálculo, verifique se o usuário inseriu valores válidos.
+   - Certifique-se de que a moeda de origem e destino escolhida pelo usuário está na lista de moedas suportadas.
+   - Valide também o valor inserido para conversão (deve ser um número positivo).
+
+2. **Tratamento de Erros:**
+   - Se o usuário inserir uma moeda inválida, exiba uma mensagem de erro e peça que ele escolha novamente.
+   - Se o valor inserido não for um número válido, informe o usuário e solicite uma nova entrada.
+
+3. **Try-Catch (Bloco Try-Catch):**
+   - Use blocos `try` e `catch` para capturar exceções durante a execução do programa.
+   - Por exemplo, se houver um erro de conversão de string para double, trate-o no bloco `catch`.
+
+4. **Feedback ao Usuário:**
+   - Sempre forneça feedback claro ao usuário sobre o que está acontecendo.
+   - Exiba mensagens informativas, como "Moeda inválida" ou "Valor inserido não é um número válido".
+
+Aqui está um exemplo de como você pode implementar a validação de entrada no seu código:
+
+```java
+// Dentro do método main
+try {
+    // Solicita a moeda de origem
+    System.out.println("Escolha a moeda de origem:");
+    // ... (código para ler a escolha do usuário)
+
+    // Solicita a moeda de destino
+    System.out.println("Escolha a moeda de destino:");
+    // ... (código para ler a escolha do usuário)
+
+    // Solicita o valor a ser convertido
+    System.out.print("Digite o valor em " + moedas[origemIndex - 1] + ": ");
+    double valorOrigem = lerDouble();
+
+    // Restante do código de cálculo e exibição do resultado
+    // ...
+} catch (NumberFormatException e) {
+    System.out.println("Valor inserido não é um número válido. Tente novamente.");
+} catch (ArrayIndexOutOfBoundsException e) {
+    System.out.println("Moeda inválida. Escolha uma moeda válida.");
+}
+```
+
+Adaptar esse exemplo ao seu código e tratar outros possíveis erros que possam ocorrer.

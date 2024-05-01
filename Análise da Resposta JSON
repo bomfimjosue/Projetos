@@ -1,0 +1,44 @@
+Análise da Resposta JSON: Faça uma requisição HTTP para a API de taxas de câmbio usando sua chave de acesso. A resposta será em formato JSON. Analise a estrutura do JSON para entender como as taxas de câmbio estão organizadas.
+
+A **API de taxas de câmbio** fornece dados atualizados em formato JSON, permitindo que você obtenha as taxas de câmbio entre diferentes moedas. Aqui está um exemplo de resposta JSON:
+
+```json
+{
+  "base": "USD",
+  "rates": {
+    "AED": 3.67297,
+    "AFN": 89.647021,
+    "ALL": 104.709024,
+    "AMD": 476.665393,
+    "ANG": 1.789593,
+    "AOA": 597.455,
+    "ARS": 99.2347,
+    "AUD": 1.338279,
+    // ... (outras moedas)
+  }
+}
+```
+
+Vamos entender cada parte:
+
+1. **`base`:**
+   - A moeda base é o dólar americano (USD) neste exemplo.
+   - Todas as taxas de câmbio são relativas ao dólar USD.
+
+2. **`rates`:**
+   - Este é um objeto que contém as taxas de câmbio para outras moedas.
+   - Cada moeda é representada por uma chave (por exemplo, "AED" para Dirham dos Emirados Árabes Unidos).
+   - O valor associado a cada chave é a taxa de câmbio em relação ao dólar USD (por exemplo, 1 USD = 3.67297 AED).
+
+3. **Taxas Cruzadas:**
+   - Uma taxa cruzada é uma cotação no mercado de câmbio entre duas moedas (não incluindo o dólar americano) que são então cotadas em relação a uma terceira moeda.
+   - Por exemplo, se você deseja saber a taxa entre o Euro (EUR) e a Libra Esterlina (GBP), você pode calcular isso com base nas taxas conhecidas:
+     - 1 USD = 0.87 EUR
+     - 1 USD = 0.73 GBP
+     - Fórmula: EURGBP = (USDGBP / USDEUR) = (0.73 / 0.87) = 0.84
+
+4. **APIs de Bancos Centrais:**
+   - Além da API genérica, você também pode acessar dados específicos de bancos centrais, como o Banco Central Europeu, o Banco de Reserva da Austrália, o Banco Nacional Suíço e o Banco Central do Brasil.
+   - Essas APIs fornecem dados específicos desses bancos, como taxas de câmbio históricas e atuais.
+
+Fazer requisições à API usando sua chave de acesso e analisar os dados conforme necessário para implementar seu Conversor de Moedas.
