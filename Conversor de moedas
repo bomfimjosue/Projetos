@@ -1,0 +1,23 @@
+Repositório de Projetos: Conversor de Moedas
+
+Instruções:
+
+1. **Configuração do Ambiente Java:**
+   Certifique-se de ter o ambiente Java configurado corretamente. Você precisará do JDK (Java Development Kit) instalado em sua máquina. Se ainda não o tiver, faça o download e instale-o.
+
+2. **Criação do Projeto:**
+   Crie um novo projeto Java em sua IDE preferida (como Eclipse, IntelliJ ou NetBeans). Defina a estrutura básica do projeto, incluindo um pacote para suas classes.
+
+3. **Consumo da API:**
+   Pesquise e escolha uma API de taxas de câmbio. Existem várias opções disponíveis, como a Open Exchange Rates, a ExchangeRatesAPI ou a CurrencyLayer. Registre-se na API escolhida e obtenha uma chave de acesso (API key).
+
+4. **Análise da Resposta JSON:**
+   Faça uma requisição HTTP para a API de taxas de câmbio usando sua chave de acesso. A resposta será em formato JSON. Analise a estrutura do JSON para entender como as taxas de câmbio estão organizadas.
+
+5. **Filtro de Moedas:**
+   Decida quais moedas você deseja suportar em seu conversor. Por exemplo, você pode escolher USD, EUR, GBP, JPY, BRL etc. Extraia as taxas de câmbio relevantes do JSON para essas moedas.
+
+6. **Exibição de Resultados aos Usuários:**
+   Crie um menu de opções para os usuários escolherem as moedas de origem e destino. Solicite o valor a ser convertido e calcule a conversão com base nas taxas obtidas da API. Exiba o resultado para o usuário.
+
+7. ** Tratar erros, como conexões falhas à API ou entradas inválidas dos usuários.
